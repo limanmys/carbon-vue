@@ -172,6 +172,10 @@
       :number-of-items="internalNumberOfItems"
       :actual-items-on-page="this.registeredRows.length"
       @change="$emit('pagination', $event)"
+      :page-sizes-label="paginatorSettings.pageSizesLabel"
+      :page-number-label="paginatorSettings.pageNumberLabel"
+      :forwards-text="paginatorSettings.forwardsText"
+      :backwards-text="paginatorSettings.backwardsText"
     >
       <template v-slot:range-text="{ scope }">
         <slot name="range-text" v-bind:scope="scope" v-if="$scopedSlots['range-text']" />
@@ -245,6 +249,7 @@ export default {
     skeleton: Boolean,
     hasExpandAll: Boolean,
     staticWidth: Boolean,
+    paginatorSettings: Object
   },
   model: {
     prop: 'rows-selected',

@@ -1,14 +1,14 @@
 {
   "name": "@limanmys/carbon-vue",
   "description": "A collection of components for the Carbon Design System built using Vue.js",
-  "version": "2.42.0",
+  "version": "2.42.1",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dogukanoksuz/carbon-components-vue.git"
+    "url": "git+https://github.com/limanmys/carbon-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/carbon-design-system/carbon-components-vue/issues/new"
+    "url": "https://github.com/limanmys/carbon-vue/issues/new"
   },
   "homepage": "http://vue.carbondesignsystem.com/",
   "main": "dist/carbon-vue.umd.min.js",
