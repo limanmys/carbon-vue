@@ -12670,7 +12670,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2f83b402-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/cv-pagination/cv-pagination.vue?vue&type=template&id=5caea014&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2f83b402-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/cv-pagination/cv-pagination.vue?vue&type=template&id=9c5db278&
 var render = function () {
 var _obj, _obj$1;
 var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:("cv-pagination " + _vm.carbonPrefix + "--pagination"),attrs:{"data-pagination":""}},[_c('div',{class:(_vm.carbonPrefix + "--pagination__left")},[_c('cv-select',{ref:"pageSizeSelect",class:(_vm.carbonPrefix + "--select__item-count"),attrs:{"label":("" + _vm.pageSizesLabel),"inline":"","value":("" + _vm.pageSizeValue)},on:{"change":_vm.onPageSizeChange}},_vm._l((_vm.pageSizes),function(size,index){return _c('cv-select-option',{key:index,attrs:{"value":("" + (size.value ? size.value : size))}},[_vm._v(_vm._s(size.label ? size.label : size.value ? size.value : size))])}),1),_c('span',{class:(_vm.carbonPrefix + "--pagination__text")},[_c('span',{attrs:{"data-displayed-item-range":""}},[_vm._t("range-text",function(){return [_vm._v(_vm._s(_vm.rangeText))]},{"scope":_vm.rangeProps})],2)])],1),_c('div',{class:(_vm.carbonPrefix + "--pagination__right")},[(_vm.numberOfItems !== Infinity)?_c('cv-select',{ref:"pageSelect",class:(_vm.carbonPrefix + "--select__page-number"),attrs:{"label":(_vm.pageNumberLabel + ":"),"inline":"","hideLabel":"","value":("" + _vm.pageValue)},on:{"change":_vm.onPageChange}},_vm._l((_vm.pages),function(pageNumber){return _c('cv-select-option',{key:pageNumber,attrs:{"value":("" + pageNumber),"selected":_vm.pageValue === pageNumber}},[_vm._v(_vm._s(pageNumber))])}),1):_vm._e(),_c('span',{class:(_vm.carbonPrefix + "--pagination__text")},[_vm._t("of-n-pages",function(){return [_vm._v(_vm._s(_vm.pageOfPages))]},{"scope":_vm.ofNPagesProps})],2),_c('button',{class:[
@@ -12681,7 +12681,7 @@ var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/cv-pagination/cv-pagination.vue?vue&type=template&id=5caea014&
+// CONCATENATED MODULE: ./src/components/cv-pagination/cv-pagination.vue?vue&type=template&id=9c5db278&
 
 // EXTERNAL MODULE: ./src/components/cv-select/cv-select.vue + 4 modules
 var cv_select = __webpack_require__("1cf6");
@@ -12913,9 +12913,6 @@ const newFirstItem = (pageValue, pageSizeValue) => 1 + (pageValue - 1) * pageSiz
     this.pageValue = newPageValue(this.page, this.pageCount);
     this.pages = newPagesArray(this.pageCount);
     this.firstItem = newFirstItem(this.pageValue, this.pageSizeValue);
-    // console.log(this.pageValue);
-    // always emit on mount
-    this.$emit('change', this.internalValue);
   },
   watch: {
     numberOfItems() {

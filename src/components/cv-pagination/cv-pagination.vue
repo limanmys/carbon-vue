@@ -156,9 +156,6 @@ export default {
     this.pageValue = newPageValue(this.page, this.pageCount);
     this.pages = newPagesArray(this.pageCount);
     this.firstItem = newFirstItem(this.pageValue, this.pageSizeValue);
-    // console.log(this.pageValue);
-    // always emit on mount
-    this.$emit('change', this.internalValue);
   },
   watch: {
     numberOfItems() {
