@@ -17,10 +17,10 @@
         <svg :class="`${carbonPrefix}--toggle__check`" width="6px" height="5px" viewBox="0 0 6 5">
           <path d="M2.2 2.7L5 0 6 1 2.2 5 0 2.7 1 1.5z" />
         </svg>
-        <span :class="`${carbonPrefix}--toggle__text--off`" aria-hidden="true">
+        <span v-if="!hideText" :class="`${carbonPrefix}--toggle__text--off`" aria-hidden="true">
           <slot name="text-left">Off</slot>
         </span>
-        <span :class="`${carbonPrefix}--toggle__text--on`" aria-hidden="true">
+        <span v-if="!hideText" :class="`${carbonPrefix}--toggle__text--on`" aria-hidden="true">
           <slot name="text-right">On</slot>
         </span>
       </span>
@@ -40,6 +40,7 @@ export default {
     label: String,
     formItem: { type: Boolean, default: true },
     hideLabel: Boolean,
+    hideText: { type: Boolean, default: true },
   },
   computed: {
     hiddenLabel() {
