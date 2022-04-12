@@ -38,9 +38,9 @@
         @click="toggleActive(true)"
         @blur="checkFocus"
       >
-        <component :is="icon" :class="`${carbonPrefix}--search-magnifier`" />
+        <component :is="icon" :class="`${carbonPrefix}--search-magnifier-icon`" />
       </button>
-      <component v-if="!isToolbarKind" :is="icon" :class="`${carbonPrefix}--search-magnifier`" />
+      <component v-if="!isToolbarKind" :is="icon" :class="`${carbonPrefix}--search-magnifier-icon`" />
       <button
         type="button"
         :class="[`${carbonPrefix}--search-close`, { [`${carbonPrefix}--search-close--hidden`]: !clearVisible }]"

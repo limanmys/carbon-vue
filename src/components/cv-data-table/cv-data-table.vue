@@ -44,7 +44,7 @@
           >
             <div data-search :class="`${carbonPrefix}--search ${carbonPrefix}--search--sm`" role="search">
               <div
-                :class="`${carbonPrefix}--search-magnifier`"
+                :class="`${carbonPrefix}--search-magnifier-icon`"
                 tabindex="0"
                 @click="checkSearchExpand(true)"
                 @keydown.enter.prevent="checkSearchExpand(true)"
