@@ -284,16 +284,16 @@ export default {
     this.$on('cv:sort', (srcComponent, value) => this.onSort(srcComponent, value));
   },
   mounted() {
-    if (this.$refs.searchContainer) {
-      this.$refs.magnifier.addEventListener('blur', this.checkSearchFocus);
-      this.$refs.search.addEventListener('blur', this.checkSearchFocus);
+    if (this.$listeners.search) {
+      this.$nextTick(() => {
+        this.$refs.search.addEventListener('blur', this.checkSearchFocus);
+      })
     }
     this.updateRowsSelected();
     this.checkSlots();
   },
   beforeDestroy() {
-    if (this.$refs.searchContainer) {
-      this.$refs.magnifier.removeEventListener('blur', this.checkSearchFocus);
+    if (this.$listeners.search) {
       this.$refs.search.removeEventListener('blur', this.checkSearchFocus);
     }
   },
